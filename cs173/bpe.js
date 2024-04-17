@@ -19,8 +19,9 @@ function f(a, it) {
     }
     ct = Object.values(ct);
     ct.sort((a, b) => b[0] - a[0]);
-    console.log(ct);
+    console.log(ct.map(([v, k1, k2, k3]) => `${v} ${k1} ${k2}`).join("\n"));
     const rule = ct[0];
+    console.log(`${rule[1]} ${rule[2]} -> ${rule[3]}`);
     for (let i = 0; i < a.length; ++i) {
       const s = a[i];
       for (let j = s.length - 2; j >= 0; --j) {
